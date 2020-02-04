@@ -2,9 +2,11 @@
 Lädt das Menüe um die Unterpunkte zu erzeugen für die Exportfunktionen
 mit Prüfung ob Nutzer der BU Schkopau/Schkeuditz angemeldet sind
 Christian Langrock
-Version 0.2     24.01.2020
+Version 1.0     04.02.2020
 update domainName nach Änderung durch IT
+V1.0 verschoben auf gitHUB
 */
+
 using Eplan.EplApi.ApplicationFramework;
 using Eplan.EplApi.Scripting;
 using Eplan.EplApi.Base;
