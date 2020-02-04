@@ -1,0 +1,1659 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Labelling_USER_Config: LB.ExportFunc_Kabelliste.xml -->
+<Settings format="2">
+ <CAT name="USER">
+  <MOD name="Labelling">
+   <LEV1 name="Config" nodekind="scheme">
+    <LEV2 name="ExportFunc_Kabelliste">
+     <LEV3 name="Data" nodekind="block">
+      <LEV4 name="Article">
+       <Setting name="DissectAssemblies" type="bool" desc="486">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="DissectAssembliesLevel" type="int" desc="487">
+        <Val>1</Val>
+       </Setting>
+       <Setting name="DissectModules" type="bool" desc="486">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="IncludeBusbarConnectorParts" type="bool">
+        <Val/>
+       </Setting>
+       <Setting name="IncludeBusbarParts" type="bool">
+        <Val>1</Val>
+       </Setting>
+       <Setting name="IncludeCableConnectionParts" type="bool">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="IncludeCableParts" type="bool" desc="488">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="IncludeCableProjectParts" type="bool" desc="754">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="IncludeClampParts" type="bool" desc="489">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="IncludeConnectionParts" type="bool" desc="490">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="IncludeDeviceTagsWithoutPartNumber" type="bool" desc="491">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="IncludeHarnessAssemblyParts" type="bool">
+        <Val/>
+       </Setting>
+       <Setting name="IncludeHarnessMainPart" type="bool">
+        <Val/>
+       </Setting>
+       <Setting name="IncludePinAndJackParts" type="bool">
+        <Val/>
+       </Setting>
+       <Setting name="IncludePlanningParts" type="bool">
+        <Val/>
+       </Setting>
+       <Setting name="IncludePlugStripParts" type="bool">
+        <Val>1</Val>
+       </Setting>
+       <Setting name="IncludePpeHookUpParts" type="bool">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="IncludePpeSpecificationParts" type="bool">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="IncludeTerminalStripParts" type="bool">
+        <Val>1</Val>
+       </Setting>
+       <Setting name="SummarizePartsOfSameDT" type="bool">
+        <Val>1</Val>
+       </Setting>
+      </LEV4>
+      <Setting name="DocumentTypeID" type="int">
+       <Val>21</Val>
+      </Setting>
+      <LEV4 name="Export">
+       <Setting name="CharCode" type="int">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="CharacterCount" type="int">
+        <Val>1</Val>
+       </Setting>
+       <Setting name="CharacterType" type="int">
+        <Val>0</Val>
+       </Setting>
+       <Setting name="ColumnDescription" type="int">
+        <Val>1</Val>
+       </Setting>
+       <Setting name="Editor" type="string">
+        <Val/>
+       </Setting>
+       <Setting name="Separator" type="string">
+        <Val/>
+       </Setting>
+       <Setting name="UmlautIf" type="int">
+        <Val>0</Val>
+       </Setting>
+      </LEV4>
+      <LEV4 name="File">
+       <Setting name="Destination" type="string">
+        <Val>$(PROJECTPATH)\DOC\Kabelliste_$(PROJECTNAME)_SDA_Switche_20190724.xlsm</Val>
+       </Setting>
+       <Setting name="Format" type="string">
+        <Val>XmlLblExcelExportConverterImpl</Val>
+       </Setting>
+       <Setting name="Template" type="string">
+        <Val>$(MD_TEMPLATES)\Vorlage_Kabelliste_KWS.xlsm</Val>
+       </Setting>
+      </LEV4>
+      <LEV4 name="Footer">
+       <Setting name="OnEachPage" type="bool">
+        <Val>0</Val>
+       </Setting>
+      </LEV4>
+      <LEV4 name="Header">
+       <LEV5 name="FormatElements">
+        <Setting name="Element" type="int">
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+        </Setting>
+        <Setting name="ID" type="int">
+         <Val>0</Val>
+         <Val>1</Val>
+         <Val>2</Val>
+         <Val>3</Val>
+        </Setting>
+        <LEV6 name="PropertyPack0">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Project properties</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>10000</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[10000&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P10000</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack1">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Project properties</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>10011</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[10011&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P10011</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack2">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Project properties</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>10013</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[10013&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P10013</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack3">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Projekteigenschaften</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>10027</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[10027&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P10027</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+       </LEV5>
+       <Setting name="OnEachPage" type="bool">
+        <Val>1</Val>
+       </Setting>
+      </LEV4>
+      <LEV4 name="Record">
+       <LEV5 name="FormatElements">
+        <Setting name="Element" type="int">
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+         <Val>1</Val>
+        </Setting>
+        <Setting name="ID" type="int">
+         <Val>14</Val>
+         <Val>7</Val>
+         <Val>1</Val>
+         <Val>2</Val>
+         <Val>3</Val>
+         <Val>12</Val>
+         <Val>13</Val>
+         <Val>8</Val>
+         <Val>9</Val>
+         <Val>10</Val>
+         <Val>18</Val>
+         <Val>11</Val>
+         <Val>4</Val>
+         <Val>16</Val>
+         <Val>15</Val>
+         <Val>5</Val>
+         <Val>6</Val>
+         <Val>0</Val>
+         <Val>17</Val>
+        </Setting>
+        <LEV6 name="PropertyPack0">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>10005</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>19023</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[19023&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P19023</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack1">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>10005</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20040</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20040&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20040</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack10">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>10005</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20079</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20079&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20079</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack11">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>20031</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Betriebsmittel (Quelle) [1]</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>1220</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[1220&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P1220</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack12">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>117</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabelartikel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>22007</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[22007&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P22007</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack13">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>117</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabelartikel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>22003</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[22003&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P22003</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack14">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>20141</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Datensatz</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>13063</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[13063&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P13063</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack15">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>20030</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Betriebsmittel (Ziel) [1]</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>1220</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[1220&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P1220</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack16">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>20030</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Betriebsmittel (Ziel) [1]</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>1120</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[1120&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P1120</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack17">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>10005</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20025</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20025&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20025</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack18">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>20031</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Betriebsmittel (Quelle) [1]</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>1120</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[1120&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P1120</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack2">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>10005</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20042</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20042&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20042</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack3">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>10005</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20070</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20070&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20070</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack4">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>20031</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Betriebsmittel (Quelle)</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val>[LF]</Val>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20215</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20215&lt;...,,[LF]&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20215</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>1</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack5">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>20030</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Betriebsmittel (Ziel)</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val>[LF]</Val>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20215</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20215&lt;...,,[LF]&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20215</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>1</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack6">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>10005</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20031</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20031&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20031</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack7">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>10005</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20006</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20006&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20006</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack8">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>10005</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>20044</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[20044&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P20044</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+        <LEV6 name="PropertyPack9">
+         <Setting name="Length" type="int">
+          <Val>32</Val>
+         </Setting>
+         <Setting name="LengthType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="NumberFormatType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PHGroupType" type="int">
+          <Val>-1</Val>
+         </Setting>
+         <Setting name="PHType" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="PrecisionId" type="int">
+          <Val>2</Val>
+         </Setting>
+         <Setting name="PrecisionVariable" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationId" type="int">
+          <Val>117</Val>
+         </Setting>
+         <Setting name="RelationIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="RelationName" type="string">
+          <Val>Kabelartikel</Val>
+         </Setting>
+         <Setting name="RelationSeparator" type="string">
+          <Val/>
+         </Setting>
+         <Setting name="RightAlign" type="bool">
+          <Val>1</Val>
+         </Setting>
+         <Setting name="SelectedPropertyId" type="int">
+          <Val>22065</Val>
+         </Setting>
+         <Setting name="SelectedPropertyIndex" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Settings" type="string">
+          <Val>[22065&lt;...&gt;]</Val>
+         </Setting>
+         <Setting name="SumInLine" type="bool">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="Symbol" type="string">
+          <Val>P22065</Val>
+         </Setting>
+         <Setting name="Unit" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="UnitFormatFlags" type="int">
+          <Val>0</Val>
+         </Setting>
+         <Setting name="WithLineFeeds" type="bool">
+          <Val>0</Val>
+         </Setting>
+        </LEV6>
+       </LEV5>
+       <Setting name="NrLinePerPage" type="int">
+        <Val>1000</Val>
+       </Setting>
+       <Setting name="NrRecPerLine" type="int">
+        <Val>1</Val>
+       </Setting>
+       <Setting name="RecSeparator" type="string">
+        <Val>;</Val>
+       </Setting>
+      </LEV4>
+      <Setting name="SameBlockOppress" type="int">
+       <Val>0</Val>
+      </Setting>
+      <LEV4 name="SortFilter">
+       <Setting name="FilterSchemeData" type="string">
+        <Val/>
+       </Setting>
+       <Setting name="FilterSchemeName" type="string">
+        <Val>leer</Val>
+       </Setting>
+       <Setting name="SortSchemeData" type="string">
+        <Val/>
+       </Setting>
+       <Setting name="SortSchemeName" type="string">
+        <Val/>
+       </Setting>
+       <Setting name="SubFilterSchemeData" type="string">
+        <Val/>
+       </Setting>
+       <Setting name="SubFilterSchemeName" type="string">
+        <Val/>
+       </Setting>
+       <Setting name="SubSortSchemeData" type="string">
+        <Val/>
+       </Setting>
+       <Setting name="SubSortSchemeName" type="string">
+        <Val/>
+       </Setting>
+      </LEV4>
+      <Setting name="TemplateAction" type="string">
+       <Val/>
+      </Setting>
+     </LEV3>
+     <Setting name="Description" type="mlstring">
+      <Val>??_??@Ausgabe Kabelliste nach Excel&#10;mit Seitenangabe;</Val>
+     </Setting>
+     <Setting name="Name" type="mlstring">
+      <Val>??_??@ExportFunc_Kabelliste;</Val>
+     </Setting>
+     <Setting name="ReadOnly" type="bool">
+      <Val>0</Val>
+     </Setting>
+    </LEV2>
+   </LEV1>
+  </MOD>
+ </CAT>
+</Settings>
