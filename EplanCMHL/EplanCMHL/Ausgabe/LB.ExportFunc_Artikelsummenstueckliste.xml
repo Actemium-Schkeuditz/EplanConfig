@@ -293,7 +293,6 @@
          <Val>1</Val>
          <Val>1</Val>
          <Val>1</Val>
-         <Val>1</Val>
         </Setting>
         <Setting name="ID" type="int">
          <Val>1</Val>
@@ -303,8 +302,7 @@
          <Val>0</Val>
          <Val>4</Val>
          <Val>2</Val>
-         <Val>6</Val>
-         <Val>8</Val>
+         <Val>9</Val>
         </Setting>
         <LEV6 name="PropertyPack0">
          <Setting name="Length" type="int">
@@ -678,68 +676,6 @@
           <Val>0</Val>
          </Setting>
         </LEV6>
-        <LEV6 name="PropertyPack6">
-         <Setting name="Length" type="int">
-          <Val>32</Val>
-         </Setting>
-         <Setting name="LengthType" type="int">
-          <Val>0</Val>
-         </Setting>
-         <Setting name="NumberFormatType" type="int">
-          <Val>0</Val>
-         </Setting>
-         <Setting name="PHGroupType" type="int">
-          <Val>-1</Val>
-         </Setting>
-         <Setting name="PHType" type="int">
-          <Val>0</Val>
-         </Setting>
-         <Setting name="PrecisionId" type="int">
-          <Val>2</Val>
-         </Setting>
-         <Setting name="PrecisionVariable" type="bool">
-          <Val>0</Val>
-         </Setting>
-         <Setting name="RelationId" type="int">
-          <Val>117</Val>
-         </Setting>
-         <Setting name="RelationIndex" type="int">
-          <Val>0</Val>
-         </Setting>
-         <Setting name="RelationName" type="string">
-          <Val>Artikel</Val>
-         </Setting>
-         <Setting name="RelationSeparator" type="string">
-          <Val/>
-         </Setting>
-         <Setting name="RightAlign" type="bool">
-          <Val>1</Val>
-         </Setting>
-         <Setting name="SelectedPropertyId" type="int">
-          <Val>22131</Val>
-         </Setting>
-         <Setting name="SelectedPropertyIndex" type="int">
-          <Val>0</Val>
-         </Setting>
-         <Setting name="Settings" type="string">
-          <Val>[22131&lt;...&gt;]</Val>
-         </Setting>
-         <Setting name="SumInLine" type="bool">
-          <Val>0</Val>
-         </Setting>
-         <Setting name="Symbol" type="string">
-          <Val>P22131</Val>
-         </Setting>
-         <Setting name="Unit" type="int">
-          <Val>0</Val>
-         </Setting>
-         <Setting name="UnitFormatFlags" type="int">
-          <Val>0</Val>
-         </Setting>
-         <Setting name="WithLineFeeds" type="bool">
-          <Val>0</Val>
-         </Setting>
-        </LEV6>
         <LEV6 name="PropertyPack7">
          <Setting name="Length" type="int">
           <Val>32</Val>
@@ -802,7 +738,7 @@
           <Val>0</Val>
          </Setting>
         </LEV6>
-        <LEV6 name="PropertyPack8">
+        <LEV6 name="PropertyPack9">
          <Setting name="Length" type="int">
           <Val>32</Val>
          </Setting>
@@ -819,7 +755,7 @@
           <Val>0</Val>
          </Setting>
          <Setting name="PrecisionId" type="int">
-          <Val>0</Val>
+          <Val>2</Val>
          </Setting>
          <Setting name="PrecisionVariable" type="bool">
           <Val>0</Val>
@@ -840,19 +776,19 @@
           <Val>1</Val>
          </Setting>
          <Setting name="SelectedPropertyId" type="int">
-          <Val>1220</Val>
+          <Val>20467</Val>
          </Setting>
          <Setting name="SelectedPropertyIndex" type="int">
           <Val>0</Val>
          </Setting>
          <Setting name="Settings" type="string">
-          <Val>[1220&lt;...&gt;]</Val>
+          <Val>[20467&lt;...&gt;]</Val>
          </Setting>
          <Setting name="SumInLine" type="bool">
           <Val>0</Val>
          </Setting>
          <Setting name="Symbol" type="string">
-          <Val>P1220</Val>
+          <Val>P20467</Val>
          </Setting>
          <Setting name="Unit" type="int">
           <Val>0</Val>
@@ -880,7 +816,7 @@
       </Setting>
       <LEV4 name="SortFilter">
        <Setting name="FilterSchemeData" type="string">
-        <Val/>
+        <Val>0|1|0|1120;0|0|MCC5|0|1|1|0|0|0;0|#7|1|0|;0|0||0|1|1|0|0|0;0|#0|0|0|1220;0|0||0|1|1|0|0|0;0|</Val>
        </Setting>
        <Setting name="FilterSchemeName" type="string">
         <Val>leer</Val>
