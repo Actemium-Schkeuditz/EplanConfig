@@ -1002,21 +1002,21 @@ namespace EplanCMHL.Ausgabe
                         //                              Anlage und Einbauort                                                  0|1|0|1120;0|0|    EB3       |0|1|1|0|0|0;0|#7|1|0|;0|0| |0|1|1|0|0|0;0|#0|1|0|1220;0|0|   ET1      |0|1|1|0|0|0;0|                   
                         // MessageBox.Show("Anlage und Einbauort" + sSummaryHigherLevel + sSummaryLocation);
                         sExportFilterSettings = "0|1|0|1120;0|0|" + sSummaryHigherLevel + "|0|1|1|0|0|0;0|#7|1|0|;0|0||0|1|1|0|0|0;0|#0|1|0|1220;0|0|" + sSummaryLocation + "|0|1|1|0|0|0;0|";
-                        sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + sSummaryHigherLevel.Replace(";", "_") + "_" + sSummaryLocation.Replace(";", "_") + "_" + myDate + "_" + myTime + ".xlsx"; // Zieldatei: 
+                        sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + sSummaryHigherLevel.Replace(";", "_") + "_" + sSummaryLocation.Replace(";", "_") + "_" + myDate + "_" + myTime + ".xlsm"; // Zieldatei: 
                     }
                     else if (string.IsNullOrEmpty(sSummaryLocation))
                     {
                         //                          nur Anlage                                                                0|1|0|1120;0|0| MSR; HV1      |0|1|1|0|0|0;0|#3|1|0|;0|0||0|1|1|0|0|0;0|#0|1|0|1220;0|0| S1.F3 |0|1|1|0|0|0;0|
                         // MessageBox.Show("Anlage");
                         sExportFilterSettings = "0|1|0|1120;0|0|" + sSummaryHigherLevel + "|0|1|1|0|0|0;0|#7|1|0|;0|0||0|1|1|0|0|0;0|#0|0|0|1220;0|0|" + sSummaryLocation + "|0|1|1|0|0|0;0|";
-                        sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + sSummaryHigherLevel.Replace(";", "_") + "_" + myDate + "_" + myTime + ".xlsx"; // Zieldatei:
+                        sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + sSummaryHigherLevel.Replace(";", "_") + "_" + myDate + "_" + myTime + ".xlsm"; // Zieldatei:
                     }
                     else //(string.IsNullOrEmpty(sSummaryHigherLevel))
                     {
                         //                          nur Einbauort                                                             0|1|0|1120;0|0| MSR; HV1      |0|1|1|0|0|0;0|#3|1|0|;0|0||0|1|1|0|0|0;0|#0|1|0|1220;0|0|   S1.F3          |0|1|1|0|0|0;0|
                         // MessageBox.Show("nur Einbauort");
                         sExportFilterSettings = "0|0|0|1120;0|0|" + sSummaryHigherLevel + "|0|1|1|0|0|0;0|#7|1|0|;0|0||0|1|1|0|0|0;0|#0|1|0|1220;0|0|" + sSummaryLocation + "|0|1|1|0|0|0;0|";
-                        sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + sSummaryLocation.Replace(";", "_") + "_" + myDate + "_" + myTime + ".xlsx"; // Zieldatei:
+                        sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + sSummaryLocation.Replace(";", "_") + "_" + myDate + "_" + myTime + ".xlsm"; // Zieldatei:
 
                     }
 
@@ -1050,7 +1050,7 @@ namespace EplanCMHL.Ausgabe
                                 progress.BeginPart(iSteps, "Export: =" + ItemAnlage + " +" + ItemEinbauort);
                                 //                              Anlage und Einbauort                                                  0|1|0|1120;0|0|    EB3       |0|1|1|0|0|0;0|#7|1|0|;0|0| |0|1|1|0|0|0;0|#0|1|0|1220;0|0|   ET1      |0|1|1|0|0|0;0|                   
                                 sExportFilterSettings = "0|1|0|1120;0|0|" + ItemAnlage + "|0|1|1|0|0|0;0|#7|1|0|;0|0||0|1|1|0|0|0;0|#0|1|0|1220;0|0|" + ItemEinbauort + "|0|1|1|0|0|0;0|";
-                                sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + ItemAnlage + "_" + ItemEinbauort + "_" + myDate + "_" + myTime + ".xlsx"; // Zieldatei: 
+                                sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + ItemAnlage + "_" + ItemEinbauort + "_" + myDate + "_" + myTime + ".xlsm"; // Zieldatei: 
                                 ExportPartlist(sSchemename, SETTINGS_PATH, sExportFilename, GetProject(), sExportFilterSettings, sSortscheme);
                                 iSteps += iSteps;
                                 progress.EndPart();
@@ -1064,7 +1064,7 @@ namespace EplanCMHL.Ausgabe
                         foreach (var ItemAnlage in sAnlagenWahl)
                         {
                             progress.BeginPart(iSteps, "Export: =" + ItemAnlage + " +" + ItemAnlage);
-                            sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + ItemAnlage + "_" + myDate + "_" + myTime + ".xlsx"; // Zieldatei:
+                            sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + ItemAnlage + "_" + myDate + "_" + myTime + ".xlsm"; // Zieldatei:
                             sExportFilterSettings = "0|1|0|1120;0|0|" + ItemAnlage + "|0|1|1|0|0|0;0|#7|1|0|;0|0||0|1|1|0|0|0;0|#0|0|0|1220;0|0|" + "" + "|0|1|1|0|0|0;0|";
                             ExportPartlist(sSchemename, SETTINGS_PATH, sExportFilename, GetProject(), sExportFilterSettings, sSortscheme);
                             iSteps += iSteps;
@@ -1078,7 +1078,7 @@ namespace EplanCMHL.Ausgabe
                         {
                             progress.BeginPart(iSteps, "Export: +" + ItemEinbauort);
                             sExportFilterSettings = "0|0|0|1120;0|0|" + "" + "|0|1|1|0|0|0;0|#7|1|0|;0|0||0|1|1|0|0|0;0|#0|1|0|1220;0|0|" + ItemEinbauort + "|0|1|1|0|0|0;0|";
-                            sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + ItemEinbauort + "_" + myDate + "_" + myTime + ".xlsx"; // Zieldatei:
+                            sExportFilename = sProjectDocPath + @"\Kabelliste" + "_" + strLabelName + "_" + ItemEinbauort + "_" + myDate + "_" + myTime + ".xlsm"; // Zieldatei:
                             ExportPartlist(sSchemename, SETTINGS_PATH, sExportFilename, GetProject(), sExportFilterSettings, sSortscheme);
                             iSteps += iSteps;
                             progress.EndPart();
@@ -1117,7 +1117,7 @@ namespace EplanCMHL.Ausgabe
                 sExportierteAnlagen = string.Empty;
             }
 
-            MessageBox.Show("Artikeldaten exportiert für:\r\n" + sExportierteOrte + "\r\n" + sExportierteAnlagen);
+            MessageBox.Show("Kabellisten exportiert für:\r\n" + sExportierteOrte + "\r\n" + sExportierteAnlagen);
 
             DialogResult Result = MessageBox.Show(
            "Sollen weitere Daten exportiert werden?",
