@@ -2,9 +2,13 @@
 Lädt das Menüe um die Unterpunkte zu erzeugen für die Exportfunktionen
 mit Prüfung ob Nutzer der BU Schkopau/Schkeuditz angemeldet sind
 Christian Langrock
-Version 1.0     04.02.2020
-update domainName nach Änderung durch IT
+Version 1.1     16.06.2021
+
+Änderungesverlauf
+V0.2 update domainName nach Änderung durch IT
 V1.0 verschoben auf gitHUB
+V1.1 integration Documentation Tool
+
 */
 
 using Eplan.EplApi.ApplicationFramework;
@@ -18,8 +22,7 @@ namespace EplanCMHL.Ausgabe
 {
     class CreateMenue
     {
-        readonly string[] domainName = { @"VED\ORG-AC-deDZ002-BU00103-Users", @"VED\ORG-AC-DEMD001-Users", @"VED\ORG-AC-DEMQ002-Users" }; // hier Domain Nammen der Nutzer eintragen
-
+        readonly string[] domainName = { @"VED\ORG-AC-deDZ002-BU00103-Users", @"VED\ORG-AC-DEMD001-Users", @"VED\ORG-AC-DEMQ002-Users", @"VED\ORG-AC-DELOE01-BU03898-Users"}; // hier Domain Nammen der Nutzer eintragen
 
         // Menü zusammenbauen
         [DeclareMenu]
@@ -48,8 +51,7 @@ namespace EplanCMHL.Ausgabe
                             false // Seperator dahinter anzeigen
                         );
 
-                    // Eplan.EplApi.Gui.Menu oMenu = new Eplan.EplApi.Gui.Menu();
-                    // uint presMenuId = oMenu.GetPersistentMenuId("Makros"); // nicht verwendet
+                    // Makro Navigator 
                     uint presMenuId = 37024; //Menü-ID: Einfügen/Fenstermakro...
                     oMenu.AddMenuItem("Makros Einfuegen mit Navigator",
                         "ShowMacroNavi",
@@ -59,7 +61,8 @@ namespace EplanCMHL.Ausgabe
                         false,
                         false
                         );
-                    // Eplan.EplApi.Gui.Menu oMenu = new Eplan.EplApi.Gui.Menu();
+
+                    // PDF Assistant
                     oMenu.AddMenuItem("PDF (Assistent)...",     // Name: Menüpunkt
                         "PDFAssistent_Start",                   // Name: Action
                         "PDF Assistent," +                      // Statustext
@@ -69,6 +72,18 @@ namespace EplanCMHL.Ausgabe
                         false,
                         false
                         );
+
+			        // Documentation Tool
+                     presMenuId = 35379; //Menü-ID: Einfügen/Fenstermakro...
+		            oMenu.AddMenuItem("Dokumentations-Tool...",
+                        "ShowDocumentationTool",                // Name: Action
+                        "Externe Dokumente ermitteln und kopieren", 
+                        presMenuId,
+                        1,
+                        false,
+                        false
+                        );
+	
 
                     // Hauptmenü mit einem Unterpunkt
                     /*  MenuID = oMenu.AddMainMenu(
@@ -92,9 +107,6 @@ namespace EplanCMHL.Ausgabe
                               );
                           */
 
-                    //         
-                    // string scriptName = @"$(MD_SCRIPTS)\Ausgabe\PDF\PDF Assistent.cs";
-                    // loadScripts(scriptName);
                     return;
                 }
             }
@@ -132,8 +144,6 @@ namespace EplanCMHL.Ausgabe
             ExcecuteScripts(scriptName, "1");
         }
 
-
-
         [DeclareEventHandler("onActionStart.String.XPrjActionProjectClose")]
         public void ExcecuteBackupScript()
         {
@@ -143,6 +153,14 @@ namespace EplanCMHL.Ausgabe
             ExcecuteScripts(scriptName);
         }
 
+        [DeclareAction("ShowDocumentationTool")]
+        public void ExcecuteDocumentationScript()
+        {
+            string scriptName = @"$(MD_SCRIPTS)\DocumentationTool\DocumentationTool.cs";
+            // Pfad auflösen
+            scriptName = PathMap.SubstitutePath(scriptName);
+            ExcecuteScripts(scriptName);
+        }
 
 
         private void ExcecuteScripts(string sScriptName, string Param = "")
@@ -171,8 +189,6 @@ namespace EplanCMHL.Ausgabe
 
         }
 
-        
-
 
         private void loadScripts(string sScriptName)
         {
@@ -197,7 +213,6 @@ namespace EplanCMHL.Ausgabe
             }
            
         }
-
 
         public static bool IsUserInGroup(string[] gruopName)
         {
