@@ -16,7 +16,6 @@ namespace EplanCMHL.Ausgabe
 
     public partial class AusgabeListen : Form
     {
-       
 
         private System.Windows.Forms.Button ButtonSummaryPartlist;
         private System.Windows.Forms.Button ButtonCancel;
@@ -172,19 +171,16 @@ namespace EplanCMHL.Ausgabe
 
         public AusgabeListen()
             {
-             InitializeComponent();
-           
+            InitializeComponent();
         }
 
         #endregion
-       
-       
+
         private List<string> sAnlagenWahl = new List<String>();
         private List<string> sEinbauortWahl = new List<String>();
         private string sTagEinbauort = "Einbauort";
         private string sTagAnlagen = "Anlagen";
         private bool getSummaryList = false;
-       
 
         string strLabelName = PathMap.SubstitutePath("$(PROJECTNAME)");
         string myDate = System.DateTime.Now.ToString("yyyyMMdd");
@@ -214,9 +210,7 @@ namespace EplanCMHL.Ausgabe
             {
                 MessageBox.Show("Kein Projekt geöffnet !", "Action: selectionset");
             }
-        //}
 
-      
         }
 
         public void FormAuswahlDaten()
@@ -282,7 +276,7 @@ namespace EplanCMHL.Ausgabe
                   //  MessageBox.Show(cb.Text + " Anlage checked");
                     sAnlagenWahl.Add(cb.Text);
                 }
-               
+            
             }
             else
             {
@@ -453,7 +447,7 @@ namespace EplanCMHL.Ausgabe
             string sExportierteAnlagen;
             if (sEinbauortWahl.Count > 0)
             {
-                 sExportierteOrte = string.Join(",\r\n+", sEinbauortWahl.ToArray());
+                sExportierteOrte = string.Join(",\r\n+", sEinbauortWahl.ToArray());
                 sExportierteOrte = "Einbauorte:\r\n+" + sExportierteOrte;
             }
             else
@@ -473,17 +467,16 @@ namespace EplanCMHL.Ausgabe
             MessageBox.Show("Artikeldaten exportiert für:\r\n" + sExportierteOrte + "\r\n" + sExportierteAnlagen);
 
             DialogResult Result = MessageBox.Show(
-           "Sollen weitere Daten exportiert werden?",
-           "Export Daten",
-           MessageBoxButtons.YesNo,
-           MessageBoxIcon.Question
-           );
+                "Sollen weitere Daten exportiert werden?",
+                "Export Daten",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
             if (Result == DialogResult.No)
                 this.Close();
         }
 
-     
 
         private static string GetProject()
         {

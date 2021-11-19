@@ -2,12 +2,13 @@
 Lädt das Menüe um die Unterpunkte zu erzeugen für die Exportfunktionen
 mit Prüfung ob Nutzer der BU Schkopau/Schkeuditz angemeldet sind
 Christian Langrock
-Version 1.1     16.06.2021
+Version 1.2     19.11.2021
 
 Änderungesverlauf
 V0.2 update domainName nach Änderung durch IT
 V1.0 verschoben auf gitHUB
 V1.1 integration Documentation Tool
+V1.2 update Aufruf PDF Assistent
 
 */
 
@@ -39,8 +40,6 @@ namespace EplanCMHL.Ausgabe
                     // Abfragen der Menue-ID
                     uint MenuID = oMenu.GetPersistentMenuId("Export / Beschriftung...");
 
-                    // MessageBox.Show(MenuID.ToString()); // nur test
-
                     oMenu.AddMenuItem(
                             "Ausgabe Projektisten", // Name: Menüpunkt
                             "ExcecuteSummaryPartlist", // Name: Action
@@ -60,7 +59,7 @@ namespace EplanCMHL.Ausgabe
                         1,
                         false,
                         false
-                        );
+                    );
 
                     // PDF Assistant
                     oMenu.AddMenuItem("PDF (Assistent)...",     // Name: Menüpunkt
@@ -71,18 +70,18 @@ namespace EplanCMHL.Ausgabe
                         1,
                         false,
                         false
-                        );
+                    );
 
 			        // Documentation Tool
-                     presMenuId = 35379; //Menü-ID: Einfügen/Fenstermakro...
-		            oMenu.AddMenuItem("Dokumentations-Tool...",
+                    presMenuId = 35379; //Menü-ID: Einfügen/Fenstermakro...
+		                oMenu.AddMenuItem("Dokumentations-Tool...",
                         "ShowDocumentationTool",                // Name: Action
                         "Externe Dokumente ermitteln und kopieren", 
                         presMenuId,
                         1,
                         false,
                         false
-                        );
+                    );
 	
 
                     // Hauptmenü mit einem Unterpunkt
@@ -93,9 +92,9 @@ namespace EplanCMHL.Ausgabe
                              "ActionInfo", // Name: Action
                               "Info Einstellungen", // Statustext
                               1 // 1 = Hinter Menüpunkt, 0 = Vor Menüpunkt
-                              );
+                            );
                       // Menüpunkt Übersetzungsdatenbank
-                      MenuIDTrans = oMenu.AddPopupMenuItem(
+                        MenuIDTrans = oMenu.AddPopupMenuItem(
                               "Ausgabe Excel", // Name: Menü
                               "Einbauorte", // Name: Menüpunkt
                               "MenueAusgabeEinbauOrte", // Name: Action
@@ -104,7 +103,7 @@ namespace EplanCMHL.Ausgabe
                               1, // 1 = Hinter Menüpunkt, 0 = Vor Menüpunkt
                               false, // Seperator davor anzeigen
                               false // Seperator dahinter anzeigen
-                              );
+                            );
                           */
 
                     return;
@@ -211,7 +210,6 @@ namespace EplanCMHL.Ausgabe
                 MessageBox.Show(ex.Message);
                 throw;
             }
-           
         }
 
         public static bool IsUserInGroup(string[] gruopName)
@@ -219,7 +217,6 @@ namespace EplanCMHL.Ausgabe
             if (string.IsNullOrWhiteSpace(gruopName[0]))
             {
                 throw new ArgumentException("Fehler bei Benutztergruppe");
-               
             }
 
             ///<summary>
@@ -232,20 +229,16 @@ namespace EplanCMHL.Ausgabe
 
             try
             {
-                foreach (string grName in gruopName)
-                    {
-                    foreach (IdentityReference group in WindowsIdentity.GetCurrent().Groups)
-                    {
-                        if (grName == group.Translate(typeof(NTAccount)).Value)
-                        {
+                foreach (string grName in gruopName){
+                    foreach (IdentityReference group in WindowsIdentity.GetCurrent().Groups){
+                        if (grName == group.Translate(typeof(NTAccount)).Value){
                             return true;
                         }
                     }
                 }
                 return false;
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
                 MessageBox.Show(ex.Message);
                 throw;
             }
@@ -314,10 +307,6 @@ namespace EplanCMHL.Ausgabe
                     {
                         PDFAssistent_ausführen();
                     }
-                    else
-                    {
-                       // Close();
-                    }
                 }
                 else
                 {
@@ -337,20 +326,14 @@ namespace EplanCMHL.Ausgabe
                     string scriptName = @"$(MD_SCRIPTS)\Ausgabe\PDF\PDF Assistent.cs";
                     scriptName = PathMap.SubstitutePath(scriptName);
                     ExcecuteScripts(scriptName, "0");
-                    //  cboAusgabeNach.SelectedIndex = 0;
-                    //  ReadSettings();
-                    //  PDFexport(txtSpeicherort.Text + txtDateiname.Text + @".pdf");
-                    //  Close();
                 }
                 else
                 {
-                    //PDFAssistent_Start();
                     string scriptName = @"$(MD_SCRIPTS)\Ausgabe\PDF\PDF Assistent.cs";
                     scriptName = PathMap.SubstitutePath(scriptName);
                     ExcecuteScripts(scriptName, "1");
                 }
             }
         }
-
     }
 }

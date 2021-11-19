@@ -1,4 +1,4 @@
-﻿// PDF-Export Assistent, Version 1.1.0, vom 24.10.2017
+﻿// PDF-Export Assistent, Version 1.1.1, vom 19.11.2021
 //
 // Integriert einen Dialog um automatisiert PDF-Dateien in definierte Ordner abzulegen.
 // Der Aufruf erfolgt entweder über Menüpunkt (unter Seite > Export > PDF (Assistent)...)
@@ -8,7 +8,7 @@
 //
 // Copyright by Frank Schöneck, 2014
 // letzte Änderung: Frank Schöneck, 27.01.2014 V1.0.0, Projektbeginn
-// letzte Änderung: Christian Langrock, 24.10.2017 V1.1.0, Exportdatum geändert
+// letzte Änderung: Christian Langrock, 24.10.2017 V1.1.1, Übergabe der Skriptparameter geändert, notwendig wegen Eplan V2.9
 // für Eplan Electric P8, ab V2.2
 //
 
@@ -429,122 +429,13 @@ public partial class frmPDFAssistent : System.Windows.Forms.Form
 
     #endregion
 
-//Menüpunkt anlegen
-/*
-[DeclareMenu()]
-public void PDFAssistent_Menu()
-{
-    //Menüeintrag
-    Eplan.EplApi.Gui.Menu oMenu = new Eplan.EplApi.Gui.Menu();
-    oMenu.AddMenuItem("PDF (Assistent)...", "PDFAssistent_Start", "PDF Assistent, aktuelles Projekt als PDF-Datei exportieren", 35287, 1, false, false);
-}
-*/
-//Event ProjectClose abfangen
-/* nach MainCMHL übernommen
-//  [DeclareEventHandler("onActionStart.String.XPrjActionProjectClose")]
-public void Project_Close_Event()
-{
-    //Einstellung einlesen
-    Eplan.EplApi.Base.Settings oSettings = new Eplan.EplApi.Base.Settings();
-    if (oSettings.ExistSetting("USER.SCRIPTS.PDF_Assistent.ByProjectClose"))
-    {
-        bool bChecked = oSettings.GetBoolSetting("USER.SCRIPTS.PDF_Assistent.ByProjectClose", 1);
-        if (bChecked) //Bei ProjectClose ausführen
-        {
-            PDFAssistent_SollStarten();
-        }
-    }
-    return;
-}
-*/
-//Event Eplan End abfangen
-/* nach MainCMHL übernommen
-[DeclareEventHandler("Eplan.EplApi.OnMainEnd")]
-public void Eplan_End_Event()
-{
-    //Einstellung einlesen
-    Eplan.EplApi.Base.Settings oSettings = new Eplan.EplApi.Base.Settings();
-    if (oSettings.ExistSetting("USER.SCRIPTS.PDF_Assistent.ByEplanEnd"))
-    {
-        bool bChecked = oSettings.GetBoolSetting("USER.SCRIPTS.PDF_Assistent.ByEplanEnd", 1);
-        if (bChecked) //Bei EplanEnd ausführen
-        {
-            PDFAssistent_SollStarten();
-        }
-    }
-    return;
-}
-*/
-
-/* nach MainCMHL übernommen
-//Prüfen ob Assistent gestartet werden soll
-public void PDFAssistent_SollStarten()
-{
-Eplan.EplApi.Base.Settings oSettings = new Eplan.EplApi.Base.Settings();
-
-//Ist Projekt in Projekt-Ordner
-//Wenn angekreuzt dann muß Projekt im Ordner sein für Assistent, sonst kein Assistent
-//Wenn nicht angekreuzt dann Assistent
-if (oSettings.ExistSetting("USER.SCRIPTS.PDF_Assistent.OhneNachfrage"))
-{
-bool bChecked = oSettings.GetBoolSetting("USER.SCRIPTS.PDF_Assistent.ProjectInOrdner", 1);
-string sProjektInOrdner = oSettings.GetStringSetting("USER.SCRIPTS.PDF_Assistent.ProjectInOrdnerName", 0);
-if (bChecked)
-{
-    string sProjektOrdner = PathMap.SubstitutePath("$(PROJECTPATH)");
-    sProjektOrdner = sProjektOrdner.Substring(0, sProjektOrdner.LastIndexOf(@"\"));
-    if (!sProjektOrdner.EndsWith(@"\"))
-    {
-        sProjektOrdner += @"\";
-    }
-    if (sProjektInOrdner == sProjektOrdner) //hier vielleicht noch erweitern auf alle Unterordner (InString?)
-    {
-        PDFAssistent_ausführen();
-    }
-    else
-    {
-        Close();
-    }
-}
-else
-{
-    PDFAssistent_ausführen();
-}
-}
-}
-*/
-/* nach MainCMHL übernommen
-//Assistent ohne Dialog direkt ausführen (Ohne Nachfrage ausführen)
-public void PDFAssistent_ausführen()
-{
-   Eplan.EplApi.Base.Settings oSettings = new Eplan.EplApi.Base.Settings();
-   if (oSettings.ExistSetting("USER.SCRIPTS.PDF_Assistent.OhneNachfrage"))
-   {
-       bool bChecked = oSettings.GetBoolSetting("USER.SCRIPTS.PDF_Assistent.OhneNachfrage", 1);
-       if (bChecked)
-       {
-           cboAusgabeNach.SelectedIndex = 0;
-           ReadSettings();
-           PDFexport(txtSpeicherort.Text + txtDateiname.Text + @".pdf");
-           Close();
-       }
-       else
-       {
-           PDFAssistent_Start();
-       }
-   }
-}
-*/
-//Assistent Form starten
-//[DeclareAction("PDFAssistent_Start")]
-
 [Start]
-
-    public void PDFAssistent_Start(string withGUI = "1")
-    {
-        if (withGUI == "1")
+    // start the PDF export
+	// Param1 select if start with GUI
+    public void PDFAssistent_Start(string Param1)
+	{
+        if (Param1 == "1")
         {
-
             frmPDFAssistent frm = new frmPDFAssistent();
             frm.ShowDialog();
             return;
@@ -560,20 +451,19 @@ public void PDFAssistent_ausführen()
 
 //Form wird geladen
 private void frmPDFAssistent_Load(object sender, EventArgs e)
-
-{
+	{
    //Ausgabe Nach einstellen
-   cboAusgabeNach.SelectedIndex = 0;
-chkIstInProjektOrdner.CheckState = CheckState.Unchecked;
-txtProjektGespeichertInOrdner.Enabled = false;
-btnProjektOrdnerAuswahl.Enabled = false; 
-ReadSettings();
+   	cboAusgabeNach.SelectedIndex = 0;
+	chkIstInProjektOrdner.CheckState = CheckState.Unchecked;
+	txtProjektGespeichertInOrdner.Enabled = false;
+	btnProjektOrdnerAuswahl.Enabled = false; 
+	ReadSettings();
 }
 
 //Button: Abbrechen
 private void btnAbbrechen_Click(object sender, System.EventArgs e)
 {
-Close();
+	Close();
 }
 
 //Button: OK
@@ -611,11 +501,11 @@ Eplan.EplApi.Base.Settings oSettings = new Eplan.EplApi.Base.Settings();
 string sLastSchema = string.Empty;
 if (oSettings.ExistSetting("USER.PDFExportGUI.SCHEMAS.LastUsed"))
 {
-   sLastSchema = oSettings.GetStringSetting("USER.PDFExportGUI.SCHEMAS.LastUsed", 0);
+   	sLastSchema = oSettings.GetStringSetting("USER.PDFExportGUI.SCHEMAS.LastUsed", 0);
 }
 if (oSettings.ExistSetting("USER.PDFExportGUI.SCHEMAS." + sLastSchema + ".Data.TargetPath"))
 {
-   sAusgabeOrdner = oSettings.GetStringSetting("USER.PDFExportGUI.SCHEMAS." + sLastSchema + ".Data.TargetPath", 0);
+   	sAusgabeOrdner = oSettings.GetStringSetting("USER.PDFExportGUI.SCHEMAS." + sLastSchema + ".Data.TargetPath", 0);
 }
 #endif
 break;
@@ -727,24 +617,24 @@ if (chkEinstellungSpeichern.Checked)
 
 //PDF bei Projekt schließen
 if (!oSettings.ExistSetting("USER.SCRIPTS.PDF_Assistent.ByProjectClose"))
-{
-oSettings.AddBoolSetting("USER.SCRIPTS.PDF_Assistent.ByProjectClose",
-   new bool[] { false },
-   "Datumsstempel speichern",
-   new bool[] { false },
-   ISettings.CreationFlag.Insert);
-}
+	{
+	oSettings.AddBoolSetting("USER.SCRIPTS.PDF_Assistent.ByProjectClose",
+		new bool[] { false },
+		"Datumsstempel speichern",
+		new bool[] { false },
+		ISettings.CreationFlag.Insert);
+	}
 oSettings.SetBoolSetting("USER.SCRIPTS.PDF_Assistent.ByProjectClose", chkByProjectClose.Checked, 1); //1 = Visible = True
 
 //PDF bei Eplan beenden
 if (!oSettings.ExistSetting("USER.SCRIPTS.PDF_Assistent.ByEplanEnd"))
-{
-oSettings.AddBoolSetting("USER.SCRIPTS.PDF_Assistent.ByEplanEnd",
-   new bool[] { false },
-   "Datumsstempel speichern",
-   new bool[] { false },
-   ISettings.CreationFlag.Insert);
-}
+	{
+	oSettings.AddBoolSetting("USER.SCRIPTS.PDF_Assistent.ByEplanEnd",
+		new bool[] { false },
+		"Datumsstempel speichern",
+		new bool[] { false },
+		ISettings.CreationFlag.Insert);
+	}
 oSettings.SetBoolSetting("USER.SCRIPTS.PDF_Assistent.ByEplanEnd", chkByEplanEnd.Checked, 1); //1 = Visible = True
 
 //Ausgabe Nach
