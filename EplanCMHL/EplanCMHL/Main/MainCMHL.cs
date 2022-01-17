@@ -2,13 +2,16 @@
 Lädt das Menüe um die Unterpunkte zu erzeugen für die Exportfunktionen
 mit Prüfung ob Nutzer der BU Schkopau/Schkeuditz angemeldet sind
 Christian Langrock
-Version 1.2     19.11.2021
+Version 1.3     12.01.2022
+
+Original Projekt liegt auf GitHub: https://github.com/Actemium-Schkeuditz/EplanConfig
 
 Änderungesverlauf
 V0.2 update domainName nach Änderung durch IT
 V1.0 verschoben auf gitHUB
 V1.1 integration Documentation Tool
 V1.2 update Aufruf PDF Assistent
+V1.3 Ergänzung der Domain für BU Weil und Büro Achern
 
 */
 
@@ -23,8 +26,8 @@ namespace EplanCMHL.Ausgabe
 {
     class CreateMenue
     {
-        readonly string[] domainName = { @"VED\ORG-AC-deDZ002-BU00103-Users", @"VED\ORG-AC-DEMD001-Users", @"VED\ORG-AC-DEMQ002-Users", @"VED\ORG-AC-DELOE01-BU03898-Users"}; // hier Domain Nammen der Nutzer eintragen
-
+        readonly string[] domainName = { @"VED\ORG-AC-deDZ002-BU00103-Users", @"VED\ORG-AC-DEMD001-Users", @"VED\ORG-AC-DEMQ002-Users", @"VED\ORG-AC-DEOG001-Users", @"VED\ORG-AC-DELOE01-Users"}; // hier Domain Nammen der Nutzer eintragen
+                                        // BU Leipzig (Schkeuditz),         BU Magdeburg,                   Schkopau,                   Achern (Büro von Weil),            BU Weil
         // Menü zusammenbauen
         [DeclareMenu]
         public void MenuFunction()
